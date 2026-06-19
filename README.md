@@ -1,2 +1,2 @@
 # PROYECTOS-
-Proyectos de Universidad Internaconal del Ecuador 
+Proyectos de Universidad Internacional del Ecuador 
