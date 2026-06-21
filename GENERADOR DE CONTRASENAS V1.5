@@ -1,0 +1,23 @@
+import random
+
+def generar_contrasena(longitud):
+    letras = "abcdefghijklmnopqrstuvwxyz"
+    numeros = "0123456789"
+
+    contrasena = ""
+
+    for i in range(longitud):
+        tipo = random.randint(1, 3) 
+
+        if tipo == 1:
+            contrasena += letras[random.randint(0, len(letras) - 1)]
+        else:
+            contrasena += numeros[random.randint(0, len(numeros) - 1)]
+
+    contrasena = "paul123" + contrasena
+
+    return contrasena
+
+#contrasena conseguida
+print("Tu contraseña segura es:", generar_contrasena(8))
+
