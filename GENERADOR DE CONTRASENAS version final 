@@ -1,0 +1,28 @@
+import random
+
+
+def generar_contrasena(longitud, usuario):
+    letras = "abcdefghijklmnopqrstuvwxyz"
+    mayusculas = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    numeros = "0123456789"
+    simbolos = "!@#$%^&*()-_=+"
+
+    contrasena = usuario
+
+    for i in range(longitud):
+        tipo = random.randint(1, 4)
+
+        if tipo == 1:
+            contrasena += letras[random.randint(0, len(letras) - 1)]
+        elif tipo == 2:
+            contrasena += mayusculas[random.randint(0, len(mayusculas) - 1)]
+        elif tipo == 3:
+            contrasena += numeros[random.randint(0, len(numeros) - 1)]
+        else:
+            contrasena += simbolos[random.randint(0, len(simbolos) - 1)]
+
+    return contrasena
+
+
+usuario = input("Ingresa el usuario: ")
+print("Contraseña generada:", generar_contrasena(12, usuario))
